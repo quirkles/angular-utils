@@ -3,5 +3,6 @@
  */
 
 // export * from './lib/standalone-wrapper.service';
-export {StandaloneWrapperComponent} from './lib/standalone-wrapper.component';
-export {StandaloneWrapperDataSchema} from './lib/standaloneWrapperController';
+export * from './lib/standalone-wrapper.component';
+export * from './lib/standaloneWrapperController';
+export * from './lib/standalone-wrapper.module';

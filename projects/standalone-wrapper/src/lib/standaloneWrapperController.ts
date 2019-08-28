@@ -40,10 +40,10 @@ const getFormGroupForType = type => {
 
 const getFormGroup = (inputSchema) => {
   // Note: this wont work for nested inputs, if that is required this must be refactored
-  const formControls = {
-    entries: undefined,
-    values: undefined
-  };
+  const formControls: {
+    entries?: any
+    values?: any
+  } = {};
   let schema = inputSchema;
 
   if (isArray(inputSchema)) {

@@ -18,13 +18,13 @@ import {BrowserModule} from '@angular/platform-browser';
     ConfigSettingsTabComponent,
     ViewDataTabComponent,
     ConfigPaneComponent,
-    EventListComponent,
+    EventListComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [StandaloneWrapperComponent],
 })
