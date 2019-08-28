@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "StandaloneWrapper": {
+      "projectType": "library",
+      "root": "projects/standalone-wrapper",
+      "sourceRoot": "projects/standalone-wrapper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/standalone-wrapper/tsconfig.lib.json",
+            "project": "projects/standalone-wrapper/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/standalone-wrapper/src/test.ts",
+            "tsConfig": "projects/standalone-wrapper/tsconfig.spec.json",
+            "karmaConfig": "projects/standalone-wrapper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/standalone-wrapper/tsconfig.lib.json",
+              "projects/standalone-wrapper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "nw-ui-utils"
 }

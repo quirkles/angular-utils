@@ -1,0 +1,35 @@
+@import "../variables";
+
+#data-display {
+  height: 100%;
+  text-align: left;
+  background-color: $background;
+  color: $green;
+
+  pre {
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  > div {
+    overflow: hidden;
+    height: 100%;
+    font-family: monospace;
+    #edit-error-message{
+      padding: 0.5rem;
+      background-color: $red;
+      color: $background;
+      font-size: large;
+    }
+    textarea {
+      padding: 0.5rem;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      background-color: $background;
+      color: $blue;
+    }
+  }
+}

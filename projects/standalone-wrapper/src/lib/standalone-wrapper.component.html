@@ -1,0 +1,23 @@
+<div id="component-wrapper">
+  <ng-content></ng-content>
+</div>
+<div id="debugPane" class="{{showDebugPane ? 'show' : ''}}">
+  <header id="toggle-pane-view" (click)="toggleDebugPane()">
+    <span>
+      {{showDebugPane ? '∨' : '∧'}}
+    </span>
+  </header>
+  <div>
+    <aside id="settings">
+      <lib-config-pane
+        [controller]="controller"
+        (mountComponentClicked)="onMountComponentClicked()"
+        (logEventStreamClicked)="onLogEventStreamClicked()"
+        (generateDataClick)="generateDataClicked()"
+      ></lib-config-pane>
+    </aside>
+    <aside id="eventStream">
+      <lib-event-list [events]="eventStream"></lib-event-list>
+    </aside>
+  </div>
+</div>

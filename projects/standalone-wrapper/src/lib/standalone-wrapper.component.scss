@@ -1,0 +1,60 @@
+@import "./variables";
+
+$debug-pane-height: 75;
+
+#component-wrapper {
+  margin: 2rem;
+}
+
+#debugPane {
+  position: fixed;
+  top: calc(100vh - 50px);
+
+  height: #{$debug-pane-height}vh;
+  width: 100vw;
+
+  display: flex;
+  flex-flow: column;
+
+  transition: top 500ms ease-out 0ms;
+  text-align: center;
+  align-content: flex-start;
+
+  &.show {
+    top: #{100-$debug-pane-height}vh;
+  }
+
+  header {
+    border-top: 2px solid black;
+    flex-basis: 50px;
+    max-height: 50px;
+    height: 50px;
+    font-size: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      max-height: 50px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  div {
+    flex-grow: 1;
+    display: flex;
+    max-height: calc(#{$debug-pane-height}vh - 50px);
+    aside{
+      &#settings {
+        width: 50%;
+      }
+      &#eventStream {
+        overflow: auto;
+        width: 50%;
+        border-left: 1px solid black;
+        background: $background;
+      }
+    }
+  }
+}

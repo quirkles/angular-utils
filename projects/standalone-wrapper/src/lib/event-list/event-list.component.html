@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let event of events">
+    <pre><span class="purple">Event-type:</span> <span class="red">{{ event.type }}</span></pre>
+    <pre><span *ngFor="let messagePart of event.message" class="{{messagePart[1] || ''}}">{{messagePart[0]}}</span></pre>
+  </li>
+</ul>

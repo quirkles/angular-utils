@@ -1,0 +1,31 @@
+<div id="configPane">
+  <div id="header">
+      <div id="buttons">
+        <button (click)="onMountComponentClicked()">Mount</button>
+        <button (click)="onLogEventStreamClicked()">Log Events</button>
+        <button (click)="onGenerateDataClick()">Generate Data</button>
+      </div>
+      <div id="tabs">
+        <div
+          id ='settings'
+          class="{{activeTab === 'settings' ? 'active' : ''}}"
+          (click)="toggleActiveTab('settings')"
+        >Settings</div>
+        <div
+          id ='view-data'
+          class="{{activeTab === 'view-data' ? 'active' : ''}}"
+          (click)="toggleActiveTab('view-data')"
+        >View data</div>
+      </div>
+  </div>
+  <div id="panes">
+      <lib-config-settings-tab
+        *ngIf="activeTab === 'settings'"
+        [controller]="controller"
+      ></lib-config-settings-tab>
+      <lib-view-data-tab
+        *ngIf="activeTab === 'view-data'"
+        [controller]="controller"
+      ></lib-view-data-tab>
+  </div>
+</div>

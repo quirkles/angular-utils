@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "standalone-wrapper": [
+        "dist/standalone-wrapper"
+      ],
+      "standalone-wrapper/*": [
+        "dist/standalone-wrapper/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

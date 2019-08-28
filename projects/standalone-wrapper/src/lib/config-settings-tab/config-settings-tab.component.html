@@ -1,0 +1,34 @@
+<div id="config-settings-pane">
+  <form
+    id="data-settings-form"
+    *ngFor="let form of entries(controller.inputForms); trackBy: trackByControlName"
+    [formGroup]="form[1]"
+  >
+    <h3>{{form[0]}}</h3>
+    <div>
+      <div
+        *ngFor="let control of entries(form[1].controls); trackBy: trackByControlName"
+        formGroupName="{{control[0]}}"
+      >
+        <h5>{{control[0]}}</h5>
+        <div>
+          <div *ngFor="let subControl of entries(control[1].controls); trackBy: trackByControlName">
+            <div *ngIf="isPrimitiveControl(subControl[1])" class="field-wrapper">
+              <span>{{subControl[0]}}:</span>
+              <input
+                *ngIf="getInputTypeFromControl(subControl[1]) === 'number'" type="number"
+                formControlName="{{subControl[0]}}">
+              <input
+                *ngIf="getInputTypeFromControl(subControl[1]) === 'checkbox'" type="checkbox"
+                formControlName="{{subControl[0]}}">
+              <input
+                *ngIf="getInputTypeFromControl(subControl[1]) === 'text'" type="text"
+                formControlName="{{subControl[0]}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,28 @@
+#config-settings-pane {
+  height: 100%;
+  overflow: auto;
+  padding: 1rem;
+  #data-settings-form {
+    text-align: left;
+
+    h3, h5 {
+      text-decoration: underline;
+      margin-bottom: 1rem;
+
+      + div {
+        margin-left: 0.5rem;
+      }
+    }
+
+    div.field-wrapper {
+      margin-bottom: 0.75rem;
+      margin-top: 0.25rem;
+
+      > span {
+        display: inline-block;
+        min-width: 150px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

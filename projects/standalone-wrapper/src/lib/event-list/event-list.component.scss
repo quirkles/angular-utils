@@ -1,0 +1,37 @@
+@import "../variables";
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    background: #1D1F21;
+    padding: 0.25em;
+
+    color: $white;
+
+    .red {
+      color: $red;
+    }
+    .orange {
+      color: $orange;
+    }
+    .purple {
+      color: $purple;
+    }
+    .blue {
+      color: $blue;
+    }
+    .yellow {
+      color: $yellow;
+    }
+    pre {
+      margin: 0;
+      text-align: left;
+      padding: 10px;
+      overflow-y: hidden;
+    }
+    border-bottom: 1px solid $yellow;
+  }
+}
