@@ -20,6 +20,8 @@ $debug-pane-height: 75;
   text-align: center;
   align-content: flex-start;
 
+  background-color: white;
+
   &.show {
     top: #{100-$debug-pane-height}vh;
   }
