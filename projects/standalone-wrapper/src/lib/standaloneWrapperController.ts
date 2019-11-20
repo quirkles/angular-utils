@@ -12,7 +12,7 @@ interface InputConfig {
 
 export class StandaloneWrapperDataSchema {
   inputs: {
-    [field: string]: InputSchema[] | InputSchema | InputPrimitive
+    [field: string]: InputSchema[] | InputSchema | InputPrimitive | InputPrimitive[]
   };
   outputs: string[];
 }
